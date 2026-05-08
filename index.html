@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Draw Pool</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <header>
+    <h1>Weekly Draw Pool</h1>
+    <p class="sub">Transparent community prize pool system</p>
+  </header>
+
+  <section class="grid">
+    
+    <!-- LIVE POOL -->
+    <div class="card">
+      <h2>Live Pool</h2>
+      <div class="big" id="poolAmount">$0</div>
+      <p>Total entries: <span id="totalEntries">0</span></p>
+      <p>Participants: <span id="participants">0</span></p>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="card">
+      <h2>Next Draw</h2>
+      <div class="big" id="countdown">--:--:--</div>
+      <p>Draw happens every Sunday</p>
+    </div>
+
+    <!-- JOIN -->
+    <div class="card">
+      <h2>Join the Draw</h2>
+      <input type="text" id="name" placeholder="Enter your name"/>
+      <input type="number" id="tokens" placeholder="Tokens to simulate"/>
+      <button onclick="joinDraw()">Join (Demo)</button>
+      <p class="note">Demo mode: no payments required</p>
+    </div>
+
+    <!-- WINNER -->
+    <div class="card">
+      <h2>Last Winner</h2>
+      <div class="big" id="winner">None yet</div>
+      <button onclick="pickWinner()">Run Draw (Admin)</button>
+    </div>
+
+  </section>
+
+  <!-- TABLE -->
+  <section class="table-section">
+    <h2>Live Entries</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Tokens</th>
+          <th>Entries</th>
+        </tr>
+      </thead>
+      <tbody id="entryTable"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>© Weekly Draw Pool - Demo System</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

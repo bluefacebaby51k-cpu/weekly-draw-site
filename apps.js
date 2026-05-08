@@ -2,7 +2,20 @@ let entries = [];
 let pool = 0;
 
 // JOIN FUNCTION
+const API_URL = https://script.google.com/macros/s/AKfycbxFDCUUI9Qj1-9Mr5t3kDD0LcGcnUubl1rvNjNkHyzoe_-5ziAG4mUElY_3iNQJOMVffw/exec;
+
 function joinDraw() {
+  const name = document.getElementById("name").value;
+  const tokens = document.getElementById("tokens").value;
+
+  if (!name || !tokens) return alert("Fill all fields");
+
+  fetch(API_URL + "?name=" + name + "&tokens=" + tokens)
+    .then(res => res.text())
+    .then(data => {
+      alert("Entry submitted!");
+    });
+}
   const name = document.getElementById("name").value;
   const tokens = parseInt(document.getElementById("tokens").value);
 

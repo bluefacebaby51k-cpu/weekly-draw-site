@@ -2,7 +2,7 @@ let entries = [];
 let pool = 0;
 
 // JOIN FUNCTION
-https://script.google.com/macros/s/AKfycbzT9HWv1vnswBUIisIi76EmwClE8vWCvbM7-v24ycR8nhq_IhziY6YDOjpKh0rH8ycmdg/exec
+https://script.google.com/macros/s/AKfycbwZJwG6JJDhdVklzPQnL1Qrsz8VKNMNBYwn8MDziP7ovAM7MLKybl8K6sy5qhylyTB0YA/exec
 
 function joinDraw() {
   const name = document.getElementById("name").value;
